@@ -4,7 +4,6 @@ import time
 import os
 from dotenv import dotenv_values
 
-
 # Luego definiré el path desde airflow
 # path = os.environ['AIRFLOW_HOME']
 # env_path = f'{path}/dags/env/gcba_api_key.env'
@@ -74,7 +73,7 @@ def save_to_csv(data, filename):
 
 # Definir path base
 #path = os.getenv('DATA_PATH', './dags/data')  # Puedes definir 'path' como variable de entorno o usar './dags/data' por defecto
-path = "H:/My Drive/PDA/ecobici/data/"
+path = "H:/My Drive/PDA/ecobici/data/raw/"
 
 # URLs para obtener información y estado de las estaciones
 urls = {
