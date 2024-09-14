@@ -8,11 +8,12 @@ from dotenv import dotenv_values
 # Luego definiré el path desde airflow
 # path = os.environ['AIRFLOW_HOME']
 # env_path = f'{path}/dags/env/gcba_api_key.env'
+# También puedo probar con variables de airflow en lugar de .env...
 
 env_path = 'H:/My Drive/PDA/ecobici/env/gcba_api_key.env'
 
 def load_credentials(env_path):
-    """Load API credentials from a .env file or environment variables."""
+    """Carga las credenciales de la API desde un .env o, si hubiera, variables de entorno"""
     try:
         # Leer las credenciales desde el archivo .env
         credentials = dotenv_values(env_path)
