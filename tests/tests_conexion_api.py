@@ -31,7 +31,7 @@ class TestLoadCredentials(unittest.TestCase):
             load_credentials()
 
     @patch('conexion_api.os.path.exists', return_value=False)
-    @patch('conexion_api.dotenv_values')
+    @patch('conexion_api.dotenv_values', return_value={})
     def test_load_credentials_file_not_found(self, mock_dotenv_values, mock_exists):
         # Simular que el archivo .env no existe
         with self.assertRaises(ValueError):
