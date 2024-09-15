@@ -5,11 +5,20 @@ import pandas as pd
 import os
 import sys
 
-# Definir el path base para la prueba
-path = "h:/My Drive/PDA/ecobici/"
-sys.path.append(os.path.abspath(path))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from src.conexion_api import load_credentials, make_request, save_to_csv
+
+#path = "h:/My Drive/PDA/ecobici/"
+#sys.path.append(os.path.abspath(path))
+
+#from src.conexion_api import load_credentials, make_request, save_to_csv
+
+# Definir el path base para la prueba
+#base_path = os.path.dirname(os.path.abspath(__file__))
+#src_path = os.path.join(base_path, '..', 'src')  # Ruta al directorio src
+#sys.path.append(src_path)
+
+from conexion_api import load_credentials, make_request, save_to_csv
 
 class TestLoadCredentials(unittest.TestCase):
 
