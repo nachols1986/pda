@@ -7,22 +7,11 @@ import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-
-#path = "h:/My Drive/PDA/ecobici/"
-#sys.path.append(os.path.abspath(path))
-
-#from src.conexion_api import load_credentials, make_request, save_to_csv
-
-# Definir el path base para la prueba
-#base_path = os.path.dirname(os.path.abspath(__file__))
-#src_path = os.path.join(base_path, '..', 'src')  # Ruta al directorio src
-#sys.path.append(src_path)
-
 from conexion_api import load_credentials, make_request, save_to_csv
 
 class TestLoadCredentials(unittest.TestCase):
 
-    @patch('src.conexion_api.os.getenv')
+    @patch('conexion_api.os.getenv')
     def test_load_credentials(self, mock_getenv):
         # Simular las credenciales desde las variables de entorno
         mock_getenv.side_effect = lambda var: {
@@ -35,14 +24,14 @@ class TestLoadCredentials(unittest.TestCase):
         self.assertEqual(vclient_id, 'test_id')
         self.assertEqual(vclient_secret, 'test_secret')
 
-    @patch('src.conexion_api.os.getenv', side_effect=lambda var: None)
+    @patch('conexion_api.os.getenv', side_effect=lambda var: None)
     def test_load_credentials_missing_values(self, mock_getenv):
         # Simular que las variables de entorno tienen valores None
         with self.assertRaises(ValueError):
             load_credentials()
 
-    @patch('src.conexion_api.os.path.exists', return_value=False)
-    @patch('src.conexion_api.dotenv_values')
+    @patch('conexion_api.os.path.exists', return_value=False)
+    @patch('conexion_api.dotenv_values')
     def test_load_credentials_file_not_found(self, mock_dotenv_values, mock_exists):
         # Simular que el archivo .env no existe
         with self.assertRaises(ValueError):
@@ -50,7 +39,7 @@ class TestLoadCredentials(unittest.TestCase):
 
 class TestMakeRequest(unittest.TestCase):
 
-    @patch('src.conexion_api.requests.Session.get')
+    @patch('conexion_api.requests.Session.get')
     def test_make_request_success(self, mock_get):
         # Simular una respuesta exitosa
         mock_response = MagicMock()
@@ -62,7 +51,7 @@ class TestMakeRequest(unittest.TestCase):
         result = make_request(session, url)
         self.assertEqual(result, ['station1', 'station2'])
 
-    @patch('src.conexion_api.requests.Session.get')
+    @patch('conexion_api.requests.Session.get')
     def test_make_request_failure(self, mock_get):
         # Simular una falla en la solicitud
         mock_get.side_effect = requests.exceptions.HTTPError("Test error")
@@ -74,8 +63,8 @@ class TestMakeRequest(unittest.TestCase):
 
 class TestSaveToCSV(unittest.TestCase):
 
-    @patch('src.conexion_api.pd.json_normalize')
-    @patch('src.conexion_api.pd.DataFrame.to_csv')
+    @patch('conexion_api.pd.json_normalize')
+    @patch('conexion_api.pd.DataFrame.to_csv')
     def test_save_to_csv(self, mock_to_csv, mock_json_normalize):
         # Simular la conversión a DataFrame y la guardada en CSV
         mock_json_normalize.return_value = pd.DataFrame({'col1': [1, 2], 'col2': [3, 4]})
