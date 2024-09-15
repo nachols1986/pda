@@ -6,30 +6,33 @@ from dotenv import dotenv_values
 
 # Luego definiré el path desde airflow
 # path = os.environ['AIRFLOW_HOME']
-# env_path = f'{path}/dags/env/gcba_api_key.env'
 # También puedo probar con variables de airflow en lugar de .env...
 
-env_path = 'H:/My Drive/PDA/ecobici/env/gcba_api_key.env'
+path = "h:/My Drive/PDA/ecobici/"
+
+# Definir la ruta relativa para el archivo .env
+env_path = f'{path}/env/gcba_api_key.env'
+
+# Definir path relativo para los datos
+data_dir = f'{path}/data/raw'
 
 def load_credentials(env_path):
-    """Carga las credenciales de la API desde un .env o, si hubiera, variables de entorno"""
+    """Carga las credenciales de la API desde un .env"""
     try:
         # Leer las credenciales desde el archivo .env
         credentials = dotenv_values(env_path)
-        vclient_id = credentials.get('vclient_id') or os.getenv('VCLIENT_ID')
-        vclient_secret = credentials.get('vclient_secret') or os.getenv('VCLIENT_SECRET')
+        vclient_id = credentials.get('vclient_id')
+        vclient_secret = credentials.get('vclient_secret')
 
         if not vclient_id or not vclient_secret:
-            raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env o en las variables de entorno.")
+            raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env")
 
         return vclient_id, vclient_secret
 
     except FileNotFoundError as e:
-        # Manejar el error sin detener abruptamente el programa
         print(f"Error: {e} - No se encontró el archivo .env en la ruta especificada.")
         raise
     except ValueError as e:
-        # Lanza la excepción si no se encuentran las credenciales
         print(f"Error: {e}")
         raise
 
@@ -71,10 +74,6 @@ def save_to_csv(data, filename):
     df.to_csv(filename, index=False)
     print(f"Se ha guardado la información en {filename}")
 
-# Definir path base
-#path = os.getenv('DATA_PATH', './dags/data')  # Puedes definir 'path' como variable de entorno o usar './dags/data' por defecto
-path = "H:/My Drive/PDA/ecobici/data/raw/"
-
 # URLs para obtener información y estado de las estaciones
 urls = {
     'station_info.csv': 'https://apitransporte.buenosaires.gob.ar/ecobici/gbfs/stationInformation',
@@ -95,13 +94,13 @@ with requests.Session() as session:
     for filename, url in urls.items():
         data = make_request(session, url)
         if data:
-            save_to_csv(data, os.path.join(path, filename))
+            save_to_csv(data, os.path.join(data_dir, filename))
         else:
             print(f"No se pudieron obtener los datos de {filename}")
 
 # Obtener la cantidad de estaciones
-if 'station_info.csv' in os.listdir(path):
-    df_info = pd.read_csv(os.path.join(path, 'station_info.csv'))
+if 'station_info.csv' in os.listdir(data_dir):
+    df_info = pd.read_csv(os.path.join(data_dir, 'station_info.csv'))
     largo = len(df_info)
     print(f'Descargada información de {largo} estaciones')
 else:
