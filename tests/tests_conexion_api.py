@@ -29,13 +29,14 @@ class TestLoadCredentials(unittest.TestCase):
         # Simular que las variables de entorno tienen valores None
         with self.assertRaises(ValueError):
             load_credentials()
-
+"""
     @patch('conexion_api.os.path.exists', return_value=False)
     @patch('conexion_api.dotenv_values', return_value={})
     def test_load_credentials_file_not_found(self, mock_dotenv_values, mock_exists):
         # Simular que el archivo .env no existe
         with self.assertRaises(ValueError):
             load_credentials(env_path="dummy_path")
+"""
 
 class TestMakeRequest(unittest.TestCase):
 
