@@ -16,16 +16,22 @@ env_path = f'{path}/env/gcba_api_key.env'
 # Definir path relativo para los datos
 data_dir = f'{path}/data/raw'
 
-def load_credentials(env_path):
-    """Carga las credenciales de la API desde un .env"""
+def load_credentials(env_path=None):
+    """Carga las credenciales de la API desde un archivo .env o variables de entorno"""
     try:
-        # Leer las credenciales desde el archivo .env
-        credentials = dotenv_values(env_path)
+        if env_path and os.path.exists(env_path):
+            credentials = dotenv_values(env_path)
+        else:
+            credentials = {
+                'vclient_id': os.getenv('vclient_id'),
+                'vclient_secret': os.getenv('vclient_secret')
+            }
+        
         vclient_id = credentials.get('vclient_id')
         vclient_secret = credentials.get('vclient_secret')
 
         if not vclient_id or not vclient_secret:
-            raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env")
+            raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env o en las variables de entorno")
 
         return vclient_id, vclient_secret
 

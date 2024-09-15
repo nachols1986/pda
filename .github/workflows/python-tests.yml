@@ -21,5 +21,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run tests
+      env:
+        vclient_id: ${{ secrets.VCLIENT_ID }}
+        vclient_secret: ${{ secrets.VCLIENT_SECRET }}
       run: |
         python -m unittest discover -s tests
