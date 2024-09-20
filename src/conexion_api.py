@@ -86,7 +86,13 @@ def save_to_csv(data, filename):
         data (list): Lista de datos de las estaciones.
         filename (str): Nombre del archivo CSV a guardar.
     """
-    df = pd.json_normalize(data)  # Convierte la lista a un DataFrame
+    df = pd.json_normalize(data)
+
+    # Redondear las columnas lat y lon al cuarto decimal, si existen porque si no el SCD salta siempre.
+    if 'lat' in df.columns and 'lon' in df.columns:
+        df['lat'] = df['lat'].round(4)
+        df['lon'] = df['lon'].round(4)
+
     df.to_csv(filename, index=False)
     print(f"Se ha guardado la información en {filename}")
 
