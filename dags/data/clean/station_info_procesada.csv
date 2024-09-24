@@ -11,7 +11,7 @@ station_id,name,lat,lon,address,capacity,current
 13,013 - ONCE,-34.6101,-58.406,Av. Pueyrredon & Av. Rivadavia,30,1
 14,014 - Pacifico,-34.5774,-58.4264,"Santa Fe Av. & Bullrich, Int. Av.",30,1
 17,017 - Plaza Almagro,-34.6064,-58.4187,"441 Bulnes & Peron, Juan Domingo, Tte. General",20,1
-21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,23,1
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,23,0
 22,022 - Arenales,-34.5939,-58.3825,Cerrito & Arenales,20,1
 24,024 - ALSINA,-34.6106,-58.3809,Adolfo Alsina& Bernardo De Irigoyen,18,1
 25,025 - Plaza Guemes,-34.5894,-58.4161,"Salguero, Jeronimo & Mansilla, Lucio Norberto, General",30,1
@@ -24,7 +24,7 @@ station_id,name,lat,lon,address,capacity,current
 36,036 - MAIPÚ,-34.6011,-58.3745,Tucumán 536,12,1
 38,038 - Plaza Libertad,-34.597,-58.3828,Cerrito 990 y Av. Marcelo T. De Alvear,20,1
 41,041 - PARQUE PATRICIOS II,-34.6371,-58.4059,Av Caseros 3015,20,1
-43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,28,1
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,28,0
 44,044 - Ecoparque,-34.5755,-58.4139,"Av. Del Libertador, 3260",20,1
 45,045 - Uruguay,-34.6019,-58.3867,561 Uruguay & Av. Tucuman,20,1
 46,046 - Chile,-34.6164,-58.3744,Perú 718,18,1
@@ -37,7 +37,7 @@ station_id,name,lat,lon,address,capacity,current
 58,058 - Ministro Carranza,-34.5753,-58.4347,Santa Fe Av. & Dorrego,20,1
 59,018 - Independencia,-34.6177,-58.3806,Idependencia y Bernardo de Irigoyen,20,1
 60,060 - 25 De Mayo,-34.6017,-58.3711,527 25 De Mayo,20,1
-61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,11,1
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,11,0
 63,063 - Reconquista,-34.5998,-58.3747,Viamonte 555,28,1
 64,064 - RIOBAMBA,-34.5937,-58.3941,Riobamba 1264 & Juncal,20,1
 65,065 - Julián Álvarez,-34.5873,-58.4158,3822 Guemes,20,1
@@ -95,7 +95,7 @@ station_id,name,lat,lon,address,capacity,current
 149,149 - LIMA,-34.6153,-58.3814,México & Lima,16,1
 150,150 - RODRIGO BUENO,-34.6188,-58.3555,Av. España 2200,36,1
 152,152 - JULIETA LANTERI,-34.6182,-58.3596,"Vera Peñaloza, Rosario 599 & Lanteri Julieta",28,1
-153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,20,1
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,20,0
 155,155 - Parque José Evaristo Uriburu,-34.6451,-58.4175, Quilmes 491,12,1
 156,156 - Plaza Alemania,-34.5776,-58.4075,2939 Cavia,20,1
 158,158 - VILLARROEL,-34.5927,-58.4451,1321 Villarroel & Humboldt CABA,20,1
@@ -106,8 +106,8 @@ station_id,name,lat,lon,address,capacity,current
 165,165 - PLAZA MONSEÑOR MIGUEL DE ANDREA,-34.597,-58.4076,Dr Tomas Manuel De  Anchorena &  Jose A. Cabrera,12,1
 166,166 - Cementerio de Recoleta,-34.5883,-58.3941,Vicente López 2100,12,1
 167,275 - PLAZA 24 DE SEPTIEMBRE,-34.607,-58.4485,1355 San Martin Av.,24,1
-168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,19,1
-169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,20,1
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,19,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,20,0
 171,171 - Pasteur,-34.6033,-58.3998,519 Pasteur,20,1
 172,172 - BRASIL,-34.6254,-58.3711,BRASIL&DEFENSA,16,1
 174,174 - MINISTERIO DE EDUCACION,-34.5972,-58.3918,Marcelo T. de Alvear & Rodriguez Peña,20,1
@@ -128,7 +128,7 @@ station_id,name,lat,lon,address,capacity,current
 193,193 - ARENALES Y AGUERO,-34.5909,-58.4062,Arenales y Aguero,20,1
 194,194 - PERÓN Y ACUÑA DE FIGUEROA,-34.6061,-58.4225,3997 TTE. GENERAL JUAN DOMINGO PERON,16,1
 196,196 - HOSPITAL ARGERICH,-34.6278,-58.366,750 Pi y Margall,20,1
-197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,19,1
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,19,0
 199,199 - ESTADOS UNIDOS Y BOEDO,-34.6223,-58.416,3568 Estados Unidos & Boedo Av.,20,1
 200,200 - AUSTRIA Y FRENCH,-34.5883,-58.4043,Austria 2075,16,1
 202,001 - FACULTAD DE DERECHO,-34.5837,-58.3906,Av. Pres. Figueroa Alcorta 2120,30,1
@@ -147,7 +147,7 @@ station_id,name,lat,lon,address,capacity,current
 222,160 - Godoy Cruz y Libertador,-34.5759,-58.4185,Av. Cerviño 4301,20,1
 223,178 - José Marmol,-34.6234,-58.4249,803 José Marmol,16,1
 227,188 - Aranguren,-34.6104,-58.4328,Dr. Juan Felipe Aranguren 131,20,1
-228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",15,1
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",15,0
 229,243 - PLAZOLETA CELEDONIO FLORES,-34.5816,-58.4515,Cordoba 6599,12,1
 230,259 - PLAZA CASTELLI,-34.5678,-58.4645,Echeverria 3249,16,1
 231,384 - PLAZA BENITO NAZAR,-34.6051,-58.446,VALENTIN VIRASORO 1349,16,1
@@ -239,7 +239,7 @@ station_id,name,lat,lon,address,capacity,current
 382,204 - Biarritz,-34.6054,-58.4773,Biarritz 2403,16,1
 383,263 - Plaza Echeverria,-34.5718,-58.4895,Av. Triunvirato 5100 y Nahuel Huapi 5150,20,1
 384,267 - Plaza 25 De Agosto,-34.5795,-58.4618,14 de julio de 1194,18,1
-385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,16,1
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,16,0
 386,277 - Coghlan,-34.5654,-58.4759,2647 Estomba,8,1
 387,278 - Donato Alvarez,-34.602,-58.4656,"1540 Garcia, Juan Agustin",16,1
 392,297 - TRONADOR Y GARCÍA DEL RÍO,-34.5546,-58.4854,Tronador y Garcia del Rio,16,1
@@ -272,14 +272,14 @@ station_id,name,lat,lon,address,capacity,current
 436,253 - Plaza Colegiales,-34.5765,-58.4435,Tte. Benjamin Matienzo 2886,16,1
 440,142 - ARMENIA,-34.5906,-58.4289,ARMENIA 1525 y GORRITI,16,1
 441,016 - Legislatura,-34.6098,-58.3748,"169 Peru & Roca, Julio A., Presidente Diagonal Sur Av.",20,1
-444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",23,1
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",23,0
 448,393 - Barrio 31,-34.5821,-58.3788,Islas Galápagos 2800,32,1
 449,352 - San Jose de Flores,-34.6288,-58.4633,Av. Rivadavia 6955,24,1
 453,028 - Plaza de la Bandera,-34.6295,-58.4945,Av. Gaona 5181,20,1
 454,176 - Plaza Derechos del hombre,-34.634,-58.5069,CORTINA 551,12,1
 455,039 - Plaza Don Bosco,-34.6265,-58.508,Elpidio Gonzalez 5181,16,1
 457,110 - PLAZA CD DE BANFF,-34.628,-58.5217,ROMA 786,16,1
-458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,28,1
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,28,0
 460,133 - BEIRO Y SEGUROLA,-34.6075,-58.5119,Segurola 3194,16,1
 461,106 - MOSCONI Y CONSTITUYENTES,-34.5809,-58.4936,CONSTITUYENTES 4710,20,1
 464,377 - CIUDAD UNIVERSITARIA III,-34.541,-58.4441,Intendente Guiraldes 2160 - Pabellón III,28,1
@@ -350,7 +350,7 @@ station_id,name,lat,lon,address,capacity,current
 535,090 - HONORIO PUEYRREDON,-34.6025,-58.4497,Honorio Pueyrredón 1653,20,1
 536,019 - PLAZA  SAN MARTIN,-34.5955,-58.3775,Av. Santa Fe 716,20,1
 537,389 - Av. ELCANO,-34.5708,-58.4581,Av. ELCANO 3000,12,1
-538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,15,1
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,15,0
 539,115 - JUAN DE GARAY,-34.627,-58.3806,Av. Juan de Garay 1135,20,1
 540,185 - JORGE NEWBERY,-34.5577,-58.4103,Av. Costanera Rafael Obligado,18,1
 541,198 - AEROPARQUE,-34.5557,-58.4132,Av. Costanera Rafael Obligado,12,1
@@ -368,4 +368,278 @@ station_id,name,lat,lon,address,capacity,current
 553,210 - JOSE LEON CABEZON,-34.5802,-58.5009,José León Cabezón 2516,16,1
 554,211 - BLANCO ENCALADA,-34.5699,-58.4767,Blanco Encalada 4118,16,1
 556,230 - AREVALO,-34.5836,-58.4436,Arévalo 1408,32,1
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
 2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,1
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,1
+43,334 - CENTRO DE EXPOSICIONES,-34.584,-58.3899,2133 Figueroa Alcorta,27,1
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,1
+153,153 - JUAN MANUEL DE BLANES,-34.631,-58.3629,Av. Almirante Brown 653,19,1
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,1
+169,169 - FACULTAD DE PSICOLOGIA,-34.6131,-58.415,Av. Hipólito Yrigoyen 3417,19,1
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,1
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,1
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,1
+444,061 - Ministerio de Economia,-34.6089,-58.3707,"Balcarce e Yrigoyen, Hipolito Av.",24,1
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,27,1
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,1

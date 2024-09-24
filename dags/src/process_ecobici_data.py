@@ -1,25 +1,9 @@
 import pandas as pd
 import os
 
-# Luego definiré el path desde airflow
-# path = os.environ['AIRFLOW_HOME']
-# También puedo probar con variables de airflow en lugar de .env...
-
-"""
-path = "h:/My Drive/PDA/ecobici/"
-
-# Definir la ruta relativa para el archivo .env
-env_path = f'{path}/env/gcba_api_key.env'
-
-# Definir path relativo para los datos
-data_dir = f'{path}/data/raw'
-"""
-
-base_path = os.path.dirname(os.path.abspath(__file__))
-
-# Definir la ruta relativa para los datos
-data_dir = os.path.join(base_path, '..', 'data', 'raw')
-data_clean_dir = os.path.join(base_path, '..', 'data', 'clean')
+path = os.environ['AIRFLOW_HOME']
+data_dir = f'{path}/dags/data/raw/'
+data_clean_dir = f'{path}/dags/data/clean/'
 
 # Cargar los datos previamente descargados
 df_info = pd.read_csv(f'{data_dir}/station_info.csv')
@@ -32,7 +16,7 @@ df_info = df_info[['station_id', 'name', 'lat', 'lon', 'address', 'capacity']]
 df_st.drop(['is_charging_station', 'is_installed', 'is_renting', 'is_returning', 'traffic',
             'num_bikes_available_types.mechanical', 'num_bikes_available_types.ebike'], axis=1, inplace=True)
 
-# 1. Eliminamos duplicados
+# Eliminamos duplicados
 df_info.drop_duplicates(inplace=True)
 df_st.drop_duplicates(inplace=True)
 

@@ -4,27 +4,9 @@ import time
 import os
 from dotenv import dotenv_values
 
-# Luego definiré el path desde airflow
-# path = os.environ['AIRFLOW_HOME']
-# También puedo probar con variables de airflow en lugar de .env...
-
-"""
-path = "h:/My Drive/PDA/ecobici/"
-
-# Definir la ruta relativa para el archivo .env
-env_path = f'{path}/env/gcba_api_key.env'
-
-# Definir path relativo para los datos
-data_dir = f'{path}/data/raw'
-"""
-
-base_path = os.path.dirname(os.path.abspath(__file__))
-
-# Definir la ruta relativa para el archivo .env
-env_path = os.path.join(base_path, '..', 'env', 'gcba_api_key.env')
-
-# Definir la ruta relativa para los datos
-data_dir = os.path.join(base_path, '..', 'data', 'raw')
+path = os.environ['AIRFLOW_HOME']
+env_path = f'{path}/dags/env/gcba_api_key.env'
+data_dir = f'{path}/dags/data/raw/'
 
 def load_credentials(env_path=None):
     """Carga las credenciales de la API desde un archivo .env o variables de entorno"""

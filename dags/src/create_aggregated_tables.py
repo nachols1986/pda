@@ -1,25 +1,9 @@
 import os
 import pandas as pd
 
-# Luego definiré el path desde airflow
-# path = os.environ['AIRFLOW_HOME']
-# También puedo probar con variables de airflow en lugar de .env...
-
-"""
-path = "h:/My Drive/PDA/ecobici/"
-
-# Definir la ruta relativa para el archivo .env
-env_path = f'{path}/env/gcba_api_key.env'
-
-# Definir path relativo para los datos
-data_dir = f'{path}/data/raw'
-"""
-
-base_path = os.path.dirname(os.path.abspath(__file__))
-
-# Definir la ruta relativa para los datos
-data_dir = os.path.join(base_path, '..', 'data', 'raw')
-data_clean_dir = os.path.join(base_path, '..', 'data', 'clean')
+path = os.environ['AIRFLOW_HOME']
+data_dir = f'{path}/dags/data/raw/'
+data_clean_dir = f'{path}/dags/data/clean/'
 
 # Cargar los datos previamente descargados
 df_info = pd.read_csv(f'{data_clean_dir}/station_info_procesada.csv')
