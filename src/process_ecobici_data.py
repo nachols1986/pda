@@ -76,15 +76,9 @@ for index, row in df_info.iterrows():
 
 # Guardar los DataFrames en archivos CSV
 df_existing.to_csv(f'{data_clean_dir}/station_info_procesada.csv', index=False)
+df_st.to_csv(f'{data_clean_dir}/station_status_procesada.csv', index=False)
 
-# Guardar station_status_procesada appendeando
-station_status_file = f'{data_clean_dir}/station_status_procesada.csv'
-
-# Verificar si el archivo ya existe para decidir si escribir el encabezado o no
-if not os.path.isfile(station_status_file):
-    df_st.to_csv(station_status_file, index=False, mode='w', header=True)  # Crear el archivo con el encabezado si no existe
-else:
-    df_st.to_csv(station_status_file, index=False, mode='a', header=False)  # Appendeando sin el encabezado si ya existe
+# Nota: station_status la lógica es que se vaya sumando la nueva información sin reescribirse, pero eso lo hacemos directamente sobre redshift. Para evitar luego estar subiendo grandes archivos, solo subimos lo incremental.
 
 print("Se preprocesaron los datos de los archivos station_info.csv y station_status.csv")
 print("\n---------------------------------------------------------")
