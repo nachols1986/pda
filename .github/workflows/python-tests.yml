@@ -20,9 +20,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Create directories
+      run: |
+        mkdir -p $AIRFLOW_HOME/dags/data/raw  # Crear la carpeta si no existe
+      env:
+        AIRFLOW_HOME: ${{ github.workspace }}/ecobici  # Definir AIRFLOW_HOME
+
     - name: Run tests
       env:
-        AIRFLOW_HOME: /path/to/airflow/home
+        AIRFLOW_HOME: ${{ github.workspace }}/ecobici
         vclient_id: ${{ secrets.VCLIENT_ID }}
         vclient_secret: ${{ secrets.VCLIENT_SECRET }}
       run: |
