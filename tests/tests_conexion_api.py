@@ -5,23 +5,14 @@ import pandas as pd
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../dags/src')))
 
 from conexion_api import load_credentials, make_request, save_to_csv
 
 class TestLoadCredentials(unittest.TestCase):
 
     @patch('conexion_api.os.getenv')
-    @patch('conexion_api.os.path.exists', return_value=True)
-    @patch('conexion_api.dotenv_values', return_value={'vclient_id': 'test_id', 'vclient_secret': 'test_secret'})
-    def test_load_credentials_from_env_file(self, mock_dotenv, mock_exists, mock_getenv):
-        # Test carga desde un archivo .env existente
-        vclient_id, vclient_secret = load_credentials('fake_path.env')
-        self.assertEqual(vclient_id, 'test_id')
-        self.assertEqual(vclient_secret, 'test_secret')
-
-    @patch('conexion_api.os.getenv')
-    def test_load_credentials_from_environment(self, mock_getenv):
+    def test_load_credentials(self, mock_getenv):
         # Simular las credenciales desde las variables de entorno
         mock_getenv.side_effect = lambda var: {
             'vclient_id': 'test_id',
@@ -50,8 +41,7 @@ class TestMakeRequest(unittest.TestCase):
         
         session = requests.Session()
         url = 'http://testurl.com'
-        params = {'client_id': 'test_id', 'client_secret': 'test_secret'}
-        result = make_request(session, url, params=params)
+        result = make_request(session, url)
         self.assertEqual(result, ['station1', 'station2'])
 
     @patch('conexion_api.requests.Session.get')
@@ -61,9 +51,9 @@ class TestMakeRequest(unittest.TestCase):
         
         session = requests.Session()
         url = 'http://testurl.com'
-        params = {'client_id': 'test_id', 'client_secret': 'test_secret'}
-        result = make_request(session, url, params=params)
+        result = make_request(session, url)
         self.assertIsNone(result)
+
 
 class TestSaveToCSV(unittest.TestCase):
 

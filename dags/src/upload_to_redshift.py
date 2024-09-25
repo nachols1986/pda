@@ -4,8 +4,13 @@ import redshift_connector
 import awswrangler as wr
 from dotenv import dotenv_values
 
-# Definir paths
-path = os.environ['AIRFLOW_HOME']
+# Verifica si AIRFLOW_HOME está definido, si no usa un path local
+if 'AIRFLOW_HOME' in os.environ:
+    path = os.environ['AIRFLOW_HOME']
+else:
+    # path = ./ecobici/
+    path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
 data_clean_dir = f'{path}/dags/data/clean/'
 env_path = f'{path}/dags/env/redshift_key.env'
 
