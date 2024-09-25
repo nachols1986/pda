@@ -68,6 +68,11 @@ def save_to_csv(data, filename):
         data (list): Lista de datos de las estaciones.
         filename (str): Nombre del archivo CSV a guardar.
     """
+    # Verificar si el directorio existe, y si no, crearlo
+    directory = os.path.dirname(filename)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
     df = pd.json_normalize(data)
 
     # Redondear las columnas lat y lon al cuarto decimal, si existen porque si no el SCD salta siempre.
