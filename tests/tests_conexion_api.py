@@ -5,7 +5,7 @@ import pandas as pd
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../dags/src')))
 
 from conexion_api import load_credentials, make_request, save_to_csv
 
@@ -53,6 +53,7 @@ class TestMakeRequest(unittest.TestCase):
         url = 'http://testurl.com'
         result = make_request(session, url)
         self.assertIsNone(result)
+
 
 class TestSaveToCSV(unittest.TestCase):
 

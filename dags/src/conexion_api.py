@@ -3,36 +3,40 @@ import pandas as pd
 import time
 import os
 from dotenv import dotenv_values
+import tempfile
 
-path = os.environ['AIRFLOW_HOME']
+# Verifica si AIRFLOW_HOME está definido, si no usa un path local
+if 'AIRFLOW_HOME' in os.environ:
+    path = os.environ['AIRFLOW_HOME']
+else:
+    # path = ./ecobici/
+    path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
 env_path = f'{path}/dags/env/gcba_api_key.env'
 data_dir = f'{path}/dags/data/raw/'
 
 def load_credentials(env_path=None):
-    """Carga las credenciales de la API desde un archivo .env o variables de entorno"""
-    try:
-        if env_path and os.path.exists(env_path):
-            credentials = dotenv_values(env_path)
-        else:
-            credentials = {
-                'vclient_id': os.getenv('vclient_id'),
-                'vclient_secret': os.getenv('vclient_secret')
-            }
-        
-        vclient_id = credentials.get('vclient_id')
-        vclient_secret = credentials.get('vclient_secret')
+    """Carga las credenciales de la API desde un archivo .env o variables de entorno."""
+    
+    # Cargar credenciales desde el archivo .env si existe
+    if env_path and os.path.exists(env_path):
+        credentials = dotenv_values(env_path)
+    else:
+        # Cargar desde las variables de entorno si el archivo no existe
+        credentials = {
+            'vclient_id': os.getenv('vclient_id'),
+            'vclient_secret': os.getenv('vclient_secret')
+        }
+    
+    # Obtener credenciales
+    vclient_id = credentials.get('vclient_id')
+    vclient_secret = credentials.get('vclient_secret')
 
-        if not vclient_id or not vclient_secret:
-            raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env o en las variables de entorno")
-
-        return vclient_id, vclient_secret
-
-    except FileNotFoundError as e:
-        print(f"Error: {e} - No se encontró el archivo .env en la ruta especificada.")
-        raise
-    except ValueError as e:
-        print(f"Error: {e}")
-        raise
+    # Verificar que existan las credenciales
+    if not vclient_id or not vclient_secret:
+        raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env o en las variables de entorno")
+    
+    return vclient_id, vclient_secret
 
 def make_request(session, url, retries=3):
     """

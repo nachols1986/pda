@@ -1,7 +1,13 @@
 import pandas as pd
 import os
 
-path = os.environ['AIRFLOW_HOME']
+# Verifica si AIRFLOW_HOME está definido, si no usa un path local
+if 'AIRFLOW_HOME' in os.environ:
+    path = os.environ['AIRFLOW_HOME']
+else:
+    # path = ./ecobici/
+    path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    
 data_dir = f'{path}/dags/data/raw/'
 data_clean_dir = f'{path}/dags/data/clean/'
 
