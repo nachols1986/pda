@@ -22,6 +22,7 @@ jobs:
 
     - name: Run tests
       env:
+        AIRFLOW_HOME: /path/to/airflow/home
         vclient_id: ${{ secrets.VCLIENT_ID }}
         vclient_secret: ${{ secrets.VCLIENT_SECRET }}
       run: |
