@@ -3,6 +3,7 @@ import pandas as pd
 import time
 import os
 from dotenv import dotenv_values
+import tempfile
 
 path = os.environ['AIRFLOW_HOME']
 env_path = f'{path}/dags/env/gcba_api_key.env'
@@ -68,10 +69,15 @@ def save_to_csv(data, filename):
         data (list): Lista de datos de las estaciones.
         filename (str): Nombre del archivo CSV a guardar.
     """
-    # Verificar si el directorio existe, y si no, crearlo
+    # Crear un directorio temporal si el directorio original no se puede crear
     directory = os.path.dirname(filename)
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except PermissionError:
+        # Cambiar a un directorio temporal
+        directory = tempfile.gettempdir()
+        filename = os.path.join(directory, os.path.basename(filename))
 
     df = pd.json_normalize(data)
 
