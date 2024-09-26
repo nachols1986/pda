@@ -3,9 +3,8 @@ import pandas as pd
 import time
 import os
 from dotenv import dotenv_values
-import tempfile
 
-# Verifica si AIRFLOW_HOME está definido, si no usa un path local
+# Verificar si AIRFLOW_HOME está definido, si no usar un path local
 if 'AIRFLOW_HOME' in os.environ:
     path = os.environ['AIRFLOW_HOME']
 else:
@@ -54,13 +53,13 @@ def make_request(session, url, retries=3):
     for attempt in range(retries):
         try:
             response = session.get(url, params=params)
-            response.raise_for_status()  # Lanza excepción si hay error HTTP
+            response.raise_for_status()                 # Lanza excepción si hay error HTTP
             return response.json()['data']['stations']  # Extrae los datos de las estaciones
         except requests.exceptions.HTTPError as e:
             print(f"Error HTTP en intento {attempt+1}: {e}")
         except requests.exceptions.RequestException as e:
             print(f"Error de red en intento {attempt+1}: {e}")
-        time.sleep(2)  # Espera antes de intentar nuevamente
+        time.sleep(2)                                   # Espera antes de intentar nuevamente
     print(f"Error: No se pudo obtener la información de {url} después de {retries} intentos.")
     return None
 
@@ -74,7 +73,7 @@ def save_to_csv(data, filename):
     """
     df = pd.json_normalize(data)
 
-    # Redondear las columnas lat y lon al cuarto decimal, si existen porque si no el SCD salta siempre.
+    # Redondear las columnas lat y lon al cuarto decimal porque si no el SCD salta siempre.
     if 'lat' in df.columns and 'lon' in df.columns:
         df['lat'] = df['lat'].round(4)
         df['lon'] = df['lon'].round(4)
@@ -97,7 +96,6 @@ params = {
     'client_secret': vclient_secret
 }
 
-# Usar una sesión para todas las solicitudes
 with requests.Session() as session:
     for filename, url in urls.items():
         data = make_request(session, url)
@@ -106,7 +104,7 @@ with requests.Session() as session:
         else:
             print(f"No se pudieron obtener los datos de {filename}")
 
-# Obtener la cantidad de estaciones
+# Obtener la cantidad de estaciones para un print a modo de log
 if 'station_info.csv' in os.listdir(data_dir):
     df_info = pd.read_csv(os.path.join(data_dir, 'station_info.csv'))
     largo = len(df_info)

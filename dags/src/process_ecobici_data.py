@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-# Verifica si AIRFLOW_HOME está definido, si no usa un path local
+# Verificar si AIRFLOW_HOME está definido, si no usar un path local
 if 'AIRFLOW_HOME' in os.environ:
     path = os.environ['AIRFLOW_HOME']
 else:
@@ -45,23 +45,17 @@ df_existing = pd.read_csv(f'{data_clean_dir}/station_info_procesada.csv')
 for index, row in df_info.iterrows():
     station_id = row['station_id']
     
-    # Si la estación ya existe en la tabla dimensional
     if station_id in df_existing['station_id'].values:
         existing_row = df_existing[df_existing['station_id'] == station_id].iloc[0]
         
-        # Comparar las filas excluyendo 'current'
         row_dict = row.drop(labels='current').to_dict()
         existing_row_dict = existing_row.drop(labels='current').to_dict()
         
-        # Si hay diferencias en los valores
         if row_dict != existing_row_dict:
-            # Actualizar el registro existente como no actual (current=0)
             df_existing.loc[df_existing['station_id'] == station_id, 'current'] = 0
             
-            # Agregar el nuevo registro
             df_existing = pd.concat([df_existing, row.to_frame().T], ignore_index=True)
     else:
-        # Si la estación no existe, agregar el nuevo registro
         df_existing = pd.concat([df_existing, row.to_frame().T], ignore_index=True)
 
 # Guardar los DataFrames en archivos CSV

@@ -22,9 +22,9 @@ jobs:
 
     - name: Create directories
       run: |
-        mkdir -p $AIRFLOW_HOME/dags/data/raw  # Crear la carpeta si no existe
+        mkdir -p $AIRFLOW_HOME/dags/data/raw
       env:
-        AIRFLOW_HOME: ${{ github.workspace }}/ecobici  # Definir AIRFLOW_HOME
+        AIRFLOW_HOME: ${{ github.workspace }}/ecobici
 
     - name: Run tests
       env:
