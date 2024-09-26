@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-# Verifica si AIRFLOW_HOME está definido, si no usa un path local
+# Verificar si AIRFLOW_HOME está definido, si no usar un path local
 if 'AIRFLOW_HOME' in os.environ:
     path = os.environ['AIRFLOW_HOME']
 else:
@@ -11,20 +11,19 @@ else:
 data_dir = f'{path}/dags/data/raw/'
 data_clean_dir = f'{path}/dags/data/clean/'
 
-# Cargar los datos previamente descargados
+# Cargar los datos previamente procesados
 df_info = pd.read_csv(f'{data_clean_dir}/station_info_procesada.csv')
 df_st = pd.read_csv(f'{data_clean_dir}/station_status_procesada.csv')
 
 # Filtrar el DataFrame para quedarse solo con current = 1 de la SCD
 df_info_current = df_info[df_info['current'] == 1]
 
-# Genero algunas tablas con métricas adicionales
 # 1. Cantidad de estaciones fuera de servicio por fecha
 df_est_oos = df_st.groupby(['last_refresh','status'])['station_id'].count()
 df_est_oos = df_est_oos.unstack(fill_value=0)
 df_est_oos.reset_index(inplace=True)
 
-# Calcular el porcentaje de END_OF_LIFE sobre el total (EOL + IS)
+# ... Calcular el porcentaje de END_OF_LIFE sobre el total (EOL + IS)
 if 'END_OF_LIFE' in df_est_oos.columns and 'IN_SERVICE' in df_est_oos.columns:
     total = df_est_oos['END_OF_LIFE'].sum() + df_est_oos['IN_SERVICE'].sum()
     if total > 0:

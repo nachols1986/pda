@@ -1,10 +1,13 @@
 import os
 import pandas as pd
 import redshift_connector
-import awswrangler as wr
 from dotenv import dotenv_values
 
-# Verifica si AIRFLOW_HOME está definido, si no usa un path local
+# Uso esta librería porque con sqlalchemy estaba teniendo problemas de compatibilidad con pandas pd.to_sql.
+import awswrangler as wr 
+
+
+# Verificar si AIRFLOW_HOME está definido, si no usa un path local
 if 'AIRFLOW_HOME' in os.environ:
     path = os.environ['AIRFLOW_HOME']
 else:
