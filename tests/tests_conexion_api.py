@@ -41,7 +41,8 @@ class TestMakeRequest(unittest.TestCase):
         
         session = requests.Session()
         url = 'http://testurl.com'
-        result = make_request(session, url)
+        params = {}
+        result = make_request(session, url, params)
         self.assertEqual(result, ['station1', 'station2'])
 
     @patch('conexion_api.requests.Session.get')
@@ -51,7 +52,8 @@ class TestMakeRequest(unittest.TestCase):
         
         session = requests.Session()
         url = 'http://testurl.com'
-        result = make_request(session, url)
+        params = {}
+        result = make_request(session, url, params)
         self.assertIsNone(result)
 
 
