@@ -5,7 +5,7 @@ import pandas as pd
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../dags/src')))
 
 from conexion_api import load_credentials, make_request, save_to_csv
 
@@ -29,14 +29,6 @@ class TestLoadCredentials(unittest.TestCase):
         # Simular que las variables de entorno tienen valores None
         with self.assertRaises(ValueError):
             load_credentials()
-"""
-    @patch('conexion_api.os.path.exists', return_value=False)
-    @patch('conexion_api.dotenv_values', return_value={})
-    def test_load_credentials_file_not_found(self, mock_dotenv_values, mock_exists):
-        # Simular que el archivo .env no existe
-        with self.assertRaises(ValueError):
-            load_credentials(env_path="dummy_path")
-"""
 
 class TestMakeRequest(unittest.TestCase):
 
@@ -61,6 +53,7 @@ class TestMakeRequest(unittest.TestCase):
         url = 'http://testurl.com'
         result = make_request(session, url)
         self.assertIsNone(result)
+
 
 class TestSaveToCSV(unittest.TestCase):
 

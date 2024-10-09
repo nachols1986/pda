@@ -4,53 +4,38 @@ import time
 import os
 from dotenv import dotenv_values
 
-# Luego definiré el path desde airflow
-# path = os.environ['AIRFLOW_HOME']
-# También puedo probar con variables de airflow en lugar de .env...
+# Verificar si AIRFLOW_HOME está definido, si no usar un path local
+if 'AIRFLOW_HOME' in os.environ:
+    path = os.environ['AIRFLOW_HOME']
+else:
+    # path = ./ecobici/
+    path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-"""
-path = "h:/My Drive/PDA/ecobici/"
-
-# Definir la ruta relativa para el archivo .env
-env_path = f'{path}/env/gcba_api_key.env'
-
-# Definir path relativo para los datos
-data_dir = f'{path}/data/raw'
-"""
-
-base_path = os.path.dirname(os.path.abspath(__file__))
-
-# Definir la ruta relativa para el archivo .env
-env_path = os.path.join(base_path, '..', 'env', 'gcba_api_key.env')
-
-# Definir la ruta relativa para los datos
-data_dir = os.path.join(base_path, '..', 'data', 'raw')
+env_path = f'{path}/dags/env/gcba_api_key.env'
+data_dir = f'{path}/dags/data/raw/'
 
 def load_credentials(env_path=None):
-    """Carga las credenciales de la API desde un archivo .env o variables de entorno"""
-    try:
-        if env_path and os.path.exists(env_path):
-            credentials = dotenv_values(env_path)
-        else:
-            credentials = {
-                'vclient_id': os.getenv('vclient_id'),
-                'vclient_secret': os.getenv('vclient_secret')
-            }
-        
-        vclient_id = credentials.get('vclient_id')
-        vclient_secret = credentials.get('vclient_secret')
+    """Carga las credenciales de la API desde un archivo .env o variables de entorno."""
+    
+    # Cargar credenciales desde el archivo .env si existe
+    if env_path and os.path.exists(env_path):
+        credentials = dotenv_values(env_path)
+    else:
+        # Cargar desde las variables de entorno si el archivo no existe
+        credentials = {
+            'vclient_id': os.getenv('vclient_id'),
+            'vclient_secret': os.getenv('vclient_secret')
+        }
+    
+    # Obtener credenciales
+    vclient_id = credentials.get('vclient_id')
+    vclient_secret = credentials.get('vclient_secret')
 
-        if not vclient_id or not vclient_secret:
-            raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env o en las variables de entorno")
-
-        return vclient_id, vclient_secret
-
-    except FileNotFoundError as e:
-        print(f"Error: {e} - No se encontró el archivo .env en la ruta especificada.")
-        raise
-    except ValueError as e:
-        print(f"Error: {e}")
-        raise
+    # Verificar que existan las credenciales
+    if not vclient_id or not vclient_secret:
+        raise ValueError("No se encontraron vclient_id o vclient_secret en el archivo .env o en las variables de entorno")
+    
+    return vclient_id, vclient_secret
 
 def make_request(session, url, retries=3):
     """
@@ -68,13 +53,13 @@ def make_request(session, url, retries=3):
     for attempt in range(retries):
         try:
             response = session.get(url, params=params)
-            response.raise_for_status()  # Lanza excepción si hay error HTTP
+            response.raise_for_status()                 # Lanza excepción si hay error HTTP
             return response.json()['data']['stations']  # Extrae los datos de las estaciones
         except requests.exceptions.HTTPError as e:
             print(f"Error HTTP en intento {attempt+1}: {e}")
         except requests.exceptions.RequestException as e:
             print(f"Error de red en intento {attempt+1}: {e}")
-        time.sleep(2)  # Espera antes de intentar nuevamente
+        time.sleep(2)                                   # Espera antes de intentar nuevamente
     print(f"Error: No se pudo obtener la información de {url} después de {retries} intentos.")
     return None
 
@@ -86,7 +71,13 @@ def save_to_csv(data, filename):
         data (list): Lista de datos de las estaciones.
         filename (str): Nombre del archivo CSV a guardar.
     """
-    df = pd.json_normalize(data)  # Convierte la lista a un DataFrame
+    df = pd.json_normalize(data)
+
+    # Redondear las columnas lat y lon al cuarto decimal porque si no el SCD salta siempre.
+    if 'lat' in df.columns and 'lon' in df.columns:
+        df['lat'] = df['lat'].round(4)
+        df['lon'] = df['lon'].round(4)
+
     df.to_csv(filename, index=False)
     print(f"Se ha guardado la información en {filename}")
 
@@ -105,7 +96,6 @@ params = {
     'client_secret': vclient_secret
 }
 
-# Usar una sesión para todas las solicitudes
 with requests.Session() as session:
     for filename, url in urls.items():
         data = make_request(session, url)
@@ -114,7 +104,7 @@ with requests.Session() as session:
         else:
             print(f"No se pudieron obtener los datos de {filename}")
 
-# Obtener la cantidad de estaciones
+# Obtener la cantidad de estaciones para un print a modo de log
 if 'station_info.csv' in os.listdir(data_dir):
     df_info = pd.read_csv(os.path.join(data_dir, 'station_info.csv'))
     largo = len(df_info)
