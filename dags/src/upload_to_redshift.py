@@ -56,7 +56,6 @@ def upload_files_to_redshift():
             upload_to_redshift(file_name, table_name, 'append', conn, schema)
 
     print("Todo subido a Redshift!! =)")
-    print(schema)
 
 if __name__ == '__main__':
     upload_files_to_redshift()

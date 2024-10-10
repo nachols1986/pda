@@ -17,8 +17,8 @@ default_args = {
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
-    'start_date': datetime(2024, 10, 8),
-    'schedule_interval': '0 9 * * *', 
+    'start_date': datetime(2024, 10, 10),
+    'schedule_interval': '0 */1 * * *', 
 }
 
 dag = DAG(
