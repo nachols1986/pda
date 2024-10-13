@@ -326,7 +326,7 @@ station_id,name,lat,lon,address,capacity,current
 508,170 - RAFAELA,-34.6392,-58.4948,Rafaela 4811,12,1
 509,386 - VELEZ SARSFIELD,-34.6336,-58.4898,Av. Carrasco 214,12,1
 511,284 - AV. FOREST,-34.5754,-58.4627,Delgado 1569 (y Av. Forest),16,1
-512,195 - PARQUE CHAS,-34.5816,-58.4751,Av. De los Incas 4535,19,1
+512,195 - PARQUE CHAS,-34.5816,-58.4751,Av. De los Incas 4535,19,0
 513,308 - SAN MARTIN II,-34.5971,-58.4907,Av. San Martín 5129,12,1
 515,294 - PLAZOLETA RÍO DE LA PLATA,-34.5742,-58.4147,Av. Sarmiento 500,15,0
 516,368 - PLAZA DE LA SHOÁ,-34.571,-58.4233,Av. Del Libertador 3899,20,1
@@ -3757,6 +3757,149 @@ station_id,name,lat,lon,address,capacity,current
 458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,26,0
 515,294 - PLAZOLETA RÍO DE LA PLATA,-34.5742,-58.4147,Av. Sarmiento 500,16,0
 538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+6,006 - Parque Lezama,-34.6285,-58.3698,"Avenida Martin Garcia, 295",22,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+29,029 - Parque Centenario,-34.6079,-58.4336,Av. Patricias Argentinas & Estivao,30,0
+58,058 - Ministro Carranza,-34.5753,-58.4347,Santa Fe Av. & Dorrego,21,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+70,070 - ARAOZ,-34.5927,-58.4261,1413 Araoz & Gorriti CABA,23,0
+82,082 - HOSPITAL ITALIANO,-34.6079,-58.4264,394 Rawson & Potosi,21,0
+91,091 - Pasco,-34.6174,-58.3976,708 Pasco & Chile,23,0
+94,094 - GÚZMAN,-34.5915,-58.4497,Av Guzman 129 & Leiva,30,0
+104,104 - Federico Lacroze,-34.5876,-58.4552,Av. Guzman 1100 & Av. Corrientes,31,0
+120,120 - HOSPITAL RAMOS MEJIA,-34.6175,-58.4093,3084 Agrelo,20,0
+122,122 - COSTA RICA,-34.5916,-58.4198,COSTA RICA 4060,23,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+186,186 - MANZANA 66,-34.6136,-58.4064,2875 Moreno,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+219,140 - Las Casas,-34.636,-58.4156,Metan 3661,24,0
+220,097 - Avelino Diaz,-34.6351,-58.4276,Avelino Diaz&Doblas,16,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+234,344 - UNIVERSIDAD DI TELLA,-34.5472,-58.4468,Figueroa Alcorta 7285,20,0
+252,331 - CALIFORNIA,-34.6471,-58.3743,California 1774 y General Hornos,24,0
+259,290 - Club Excursionistas,-34.5592,-58.4442,Migueletes 1782 (y La Pampa),17,0
+268,399 - GARCIA DEL RIO,-34.5503,-58.477,Av. García del Río 3182,35,0
+277,292 - PLAZA BOLIVIA,-34.5635,-58.4361,Olleros Av. & Del Libertador Av.,18,0
+299,221 - CULPINA,-34.6317,-58.4661,Culpina 121,20,0
+310,356 - ESTACIÓN LUGANO,-34.6795,-58.4742,Martiniano Leguizamón 4401,13,0
+333,203 - Beiro,-34.6008,-58.5034,"Beiro 3572, CABA",21,0
+335,206 - Galicia,-34.6159,-58.471,2502 Galicia,28,0
+382,204 - Biarritz,-34.6054,-58.4773,Biarritz 2403,17,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+403,316 - Buenos Aires,-34.6447,-58.3939,Suarez 3150,32,0
+432,187 - Jose Maria Moreno,-34.6199,-58.4358,141 Jose Maria Moreno,27,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,26,0
+515,294 - PLAZOLETA RÍO DE LA PLATA,-34.5742,-58.4147,Av. Sarmiento 500,16,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+6,006 - Parque Lezama,-34.6285,-58.3698,"Avenida Martin Garcia, 295",22,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+29,029 - Parque Centenario,-34.6079,-58.4336,Av. Patricias Argentinas & Estivao,30,0
+58,058 - Ministro Carranza,-34.5753,-58.4347,Santa Fe Av. & Dorrego,21,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+70,070 - ARAOZ,-34.5927,-58.4261,1413 Araoz & Gorriti CABA,23,0
+82,082 - HOSPITAL ITALIANO,-34.6079,-58.4264,394 Rawson & Potosi,21,0
+91,091 - Pasco,-34.6174,-58.3976,708 Pasco & Chile,23,0
+94,094 - GÚZMAN,-34.5915,-58.4497,Av Guzman 129 & Leiva,30,0
+104,104 - Federico Lacroze,-34.5876,-58.4552,Av. Guzman 1100 & Av. Corrientes,31,0
+120,120 - HOSPITAL RAMOS MEJIA,-34.6175,-58.4093,3084 Agrelo,20,0
+122,122 - COSTA RICA,-34.5916,-58.4198,COSTA RICA 4060,23,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+186,186 - MANZANA 66,-34.6136,-58.4064,2875 Moreno,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+219,140 - Las Casas,-34.636,-58.4156,Metan 3661,24,0
+220,097 - Avelino Diaz,-34.6351,-58.4276,Avelino Diaz&Doblas,16,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+234,344 - UNIVERSIDAD DI TELLA,-34.5472,-58.4468,Figueroa Alcorta 7285,20,0
+252,331 - CALIFORNIA,-34.6471,-58.3743,California 1774 y General Hornos,24,0
+259,290 - Club Excursionistas,-34.5592,-58.4442,Migueletes 1782 (y La Pampa),17,0
+268,399 - GARCIA DEL RIO,-34.5503,-58.477,Av. García del Río 3182,35,0
+277,292 - PLAZA BOLIVIA,-34.5635,-58.4361,Olleros Av. & Del Libertador Av.,18,0
+299,221 - CULPINA,-34.6317,-58.4661,Culpina 121,20,0
+310,356 - ESTACIÓN LUGANO,-34.6795,-58.4742,Martiniano Leguizamón 4401,13,0
+333,203 - Beiro,-34.6008,-58.5034,"Beiro 3572, CABA",21,0
+335,206 - Galicia,-34.6159,-58.471,2502 Galicia,28,0
+382,204 - Biarritz,-34.6054,-58.4773,Biarritz 2403,17,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+403,316 - Buenos Aires,-34.6447,-58.3939,Suarez 3150,32,0
+432,187 - Jose Maria Moreno,-34.6199,-58.4358,141 Jose Maria Moreno,27,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,26,0
+512,195 - PARQUE CHAS,-34.5816,-58.4751,Av. De los Incas 4535,20,0
+515,294 - PLAZOLETA RÍO DE LA PLATA,-34.5742,-58.4147,Av. Sarmiento 500,16,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+6,006 - Parque Lezama,-34.6285,-58.3698,"Avenida Martin Garcia, 295",22,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+29,029 - Parque Centenario,-34.6079,-58.4336,Av. Patricias Argentinas & Estivao,30,0
+58,058 - Ministro Carranza,-34.5753,-58.4347,Santa Fe Av. & Dorrego,21,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+70,070 - ARAOZ,-34.5927,-58.4261,1413 Araoz & Gorriti CABA,23,0
+82,082 - HOSPITAL ITALIANO,-34.6079,-58.4264,394 Rawson & Potosi,21,0
+91,091 - Pasco,-34.6174,-58.3976,708 Pasco & Chile,23,0
+94,094 - GÚZMAN,-34.5915,-58.4497,Av Guzman 129 & Leiva,30,0
+104,104 - Federico Lacroze,-34.5876,-58.4552,Av. Guzman 1100 & Av. Corrientes,31,0
+120,120 - HOSPITAL RAMOS MEJIA,-34.6175,-58.4093,3084 Agrelo,20,0
+122,122 - COSTA RICA,-34.5916,-58.4198,COSTA RICA 4060,23,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+186,186 - MANZANA 66,-34.6136,-58.4064,2875 Moreno,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+219,140 - Las Casas,-34.636,-58.4156,Metan 3661,24,0
+220,097 - Avelino Diaz,-34.6351,-58.4276,Avelino Diaz&Doblas,16,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+234,344 - UNIVERSIDAD DI TELLA,-34.5472,-58.4468,Figueroa Alcorta 7285,20,0
+252,331 - CALIFORNIA,-34.6471,-58.3743,California 1774 y General Hornos,24,0
+259,290 - Club Excursionistas,-34.5592,-58.4442,Migueletes 1782 (y La Pampa),17,0
+268,399 - GARCIA DEL RIO,-34.5503,-58.477,Av. García del Río 3182,35,0
+277,292 - PLAZA BOLIVIA,-34.5635,-58.4361,Olleros Av. & Del Libertador Av.,18,0
+299,221 - CULPINA,-34.6317,-58.4661,Culpina 121,20,0
+310,356 - ESTACIÓN LUGANO,-34.6795,-58.4742,Martiniano Leguizamón 4401,13,0
+333,203 - Beiro,-34.6008,-58.5034,"Beiro 3572, CABA",21,0
+335,206 - Galicia,-34.6159,-58.471,2502 Galicia,28,0
+382,204 - Biarritz,-34.6054,-58.4773,Biarritz 2403,17,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+403,316 - Buenos Aires,-34.6447,-58.3939,Suarez 3150,32,0
+432,187 - Jose Maria Moreno,-34.6199,-58.4358,141 Jose Maria Moreno,27,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,26,0
+512,195 - PARQUE CHAS,-34.5816,-58.4751,Av. De los Incas 4535,20,0
+515,294 - PLAZOLETA RÍO DE LA PLATA,-34.5742,-58.4147,Av. Sarmiento 500,16,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
+2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,0
+6,006 - Parque Lezama,-34.6285,-58.3698,"Avenida Martin Garcia, 295",22,0
+21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,0
+29,029 - Parque Centenario,-34.6079,-58.4336,Av. Patricias Argentinas & Estivao,30,0
+58,058 - Ministro Carranza,-34.5753,-58.4347,Santa Fe Av. & Dorrego,21,0
+61,098 - BENITO JUAREZ,-34.6189,-58.5052, Benito Juarez 2231,12,0
+70,070 - ARAOZ,-34.5927,-58.4261,1413 Araoz & Gorriti CABA,23,0
+82,082 - HOSPITAL ITALIANO,-34.6079,-58.4264,394 Rawson & Potosi,21,0
+91,091 - Pasco,-34.6174,-58.3976,708 Pasco & Chile,23,0
+94,094 - GÚZMAN,-34.5915,-58.4497,Av Guzman 129 & Leiva,30,0
+104,104 - Federico Lacroze,-34.5876,-58.4552,Av. Guzman 1100 & Av. Corrientes,31,0
+120,120 - HOSPITAL RAMOS MEJIA,-34.6175,-58.4093,3084 Agrelo,20,0
+122,122 - COSTA RICA,-34.5916,-58.4198,COSTA RICA 4060,23,0
+168,168 - Estados Unidos,-34.6186,-58.3812,Estados Unidos & Lima,20,0
+186,186 - MANZANA 66,-34.6136,-58.4064,2875 Moreno,19,0
+197,197 - PLAZA CIUDAD DE UDINE,-34.621,-58.493,Mercedes 1480,20,0
+219,140 - Las Casas,-34.636,-58.4156,Metan 3661,24,0
+220,097 - Avelino Diaz,-34.6351,-58.4276,Avelino Diaz&Doblas,16,0
+228,010 - Madero UCA,-34.6165,-58.3657,"1600 Moreau De Justo, Alicia Av.",16,0
+234,344 - UNIVERSIDAD DI TELLA,-34.5472,-58.4468,Figueroa Alcorta 7285,20,0
+252,331 - CALIFORNIA,-34.6471,-58.3743,California 1774 y General Hornos,24,0
+259,290 - Club Excursionistas,-34.5592,-58.4442,Migueletes 1782 (y La Pampa),17,0
+268,399 - GARCIA DEL RIO,-34.5503,-58.477,Av. García del Río 3182,35,0
+277,292 - PLAZA BOLIVIA,-34.5635,-58.4361,Olleros Av. & Del Libertador Av.,18,0
+299,221 - CULPINA,-34.6317,-58.4661,Culpina 121,20,0
+310,356 - ESTACIÓN LUGANO,-34.6795,-58.4742,Martiniano Leguizamón 4401,13,0
+333,203 - Beiro,-34.6008,-58.5034,"Beiro 3572, CABA",21,0
+335,206 - Galicia,-34.6159,-58.471,2502 Galicia,28,0
+382,204 - Biarritz,-34.6054,-58.4773,Biarritz 2403,17,0
+385,268 - Plaza Aristóbulo Del Valle,-34.6062,-58.4931,Campana & Marcos Sastre  ,15,0
+403,316 - Buenos Aires,-34.6447,-58.3939,Suarez 3150,32,0
+432,187 - Jose Maria Moreno,-34.6199,-58.4358,141 Jose Maria Moreno,27,0
+458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,26,0
+512,195 - PARQUE CHAS,-34.5816,-58.4751,Av. De los Incas 4535,20,0
+515,294 - PLAZOLETA RÍO DE LA PLATA,-34.5742,-58.4147,Av. Sarmiento 500,16,0
+538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,0
 2,002 - Retiro I,-34.5924,-58.3747,AV. Dr. José María Ramos Mejía 1300,40,1
 6,006 - Parque Lezama,-34.6285,-58.3698,"Avenida Martin Garcia, 295",22,1
 21,021 - Parque Patricios,-34.6401,-58.4064,Iguazu & Uspallata,24,1
@@ -3790,5 +3933,6 @@ station_id,name,lat,lon,address,capacity,current
 403,316 - Buenos Aires,-34.6447,-58.3939,Suarez 3150,32,1
 432,187 - Jose Maria Moreno,-34.6199,-58.4358,141 Jose Maria Moreno,27,1
 458,219 - Parque Chacabuco II,-34.6364,-58.444,AV. ASAMBLEA 1400,26,1
+512,195 - PARQUE CHAS,-34.5816,-58.4751,Av. De los Incas 4535,20,1
 515,294 - PLAZOLETA RÍO DE LA PLATA,-34.5742,-58.4147,Av. Sarmiento 500,16,1
 538,047 - PARQUE DE LA INNOVACIÓN,-34.5451,-58.4514,Av. G. Udaondo 1146,16,1
