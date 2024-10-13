@@ -1,4 +1,5 @@
 from datetime import datetime
+from datetime import timedelta
 import pandas as pd
 import smtplib
 import os
@@ -125,7 +126,7 @@ def procesar_estaciones(path, umbral):
     
     # Obtener los valores necesarios
     fecha_str = fila_mayor_fecha['last_refresh'].iloc[0]
-    fecha = datetime.strptime(fecha_str, "%Y-%m-%d %H:%M:%S.%f").strftime("%d/%m/%Y a las %H:%M:%S")
+    fecha = (datetime.strptime(fecha_str, "%Y-%m-%d %H:%M:%S.%f") - timedelta(hours=3)).strftime("%d/%m/%Y %H:%M:%S")
     porcentaje_end_of_life = fila_mayor_fecha['%_END_OF_LIFE'].iloc[0]
     total_flota = math.ceil(fila_mayor_fecha['IN_SERVICE'].iloc[0] / (1 - porcentaje_end_of_life))
     
