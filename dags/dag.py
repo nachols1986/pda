@@ -7,6 +7,7 @@ from src.conexion_api import download_station_data
 from src.process_ecobici_data import process_ecobici_data
 from src.create_aggregated_tables import process_station_data
 from src.upload_to_redshift import upload_files_to_redshift
+from src.send_mails import ejecutar_tareas_mailing
 
 path = os.environ['AIRFLOW_HOME']
 
@@ -58,5 +59,12 @@ task4 = PythonOperator(
     dag=dag
 )
 
+task5 = PythonOperator(
+    task_id='send_mails',
+    python_callable=ejecutar_tareas_mailing,
+    trigger_rule='all_success',
+    dag=dag
+)
+
 # Definir las dependencias
-task1 >> task2 >> task3 >> task4
+task1 >> task2 >> task3 >> [task4, task5]
