@@ -19,7 +19,7 @@ station_id,name,physical_configuration,lat,lon,altitude,address,post_code,capaci
 27,027 - Montevideo,SMARTLITMAPFRAME,-34.5991,-58.3901,0.0,Cordoba Av. & Montevideo,1111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,
 29,029 - Parque Centenario,SMARTLITMAPFRAME,-34.6079,-58.4336,0.0,Av. Patricias Argentinas & Estivao,11111,30,False,"['KEY', 'TRANSITCARD', 'PHONE']",['CABALLITO'],,,1000.0,True,
 32,032 - Catedral,SMARTLITMAPFRAME,-34.6067,-58.3737,0.0,Bartolomé Mitre & San Martín,11111,18,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,
-33,033 - Facultad de Medicina,SMARTLITMAPFRAME,-34.5971,-58.399,0.0,Pres. José Evaristo Uriburu 987,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RECOLETA'],,,1000.0,True,"Uriburu Jose E., Pres. & Alvear, Marcelo T. De"
+33,033 - Facultad de Medicina,SMARTLITMAPFRAME,-34.5971,-58.399,0.0,Pres. José Evaristo Uriburu 987,11111,19,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RECOLETA'],,,1000.0,True,"Uriburu Jose E., Pres. & Alvear, Marcelo T. De"
 35,035 - INGENIERO BUTTY,SMARTLITMAPFRAME,-34.5964,-58.3718,,Ing. E. Butty 291,11111,32,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RETIRO'],,,1000.0,True,Ing. E. Butty 291 &  Av Leandro N.  Alem
 36,036 - MAIPÚ,SMARTLITMAPFRAME,-34.6011,-58.3745,,Tucumán 536,C1049,12,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,Tucumán 536
 38,038 - Plaza Libertad,SMARTLITMAPFRAME,-34.597,-58.3828,0.0,Cerrito 990 y Av. Marcelo T. De Alvear,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RETIRO'],,,1609.34,True,
