@@ -51,7 +51,7 @@ def make_request(session, url, params, retries=3):
 
 def save_to_csv(data, filename):
     """
-    Guarda los datos en un archivo CSV.
+    Guarda los datos en un archivo CSV y muestra el número de filas guardadas.
     """
     df = pd.json_normalize(data)
 
@@ -59,6 +59,8 @@ def save_to_csv(data, filename):
         df['lat'] = df['lat'].round(4)
         df['lon'] = df['lon'].round(4)
 
+    print(f"Largo del archivo {filename}: {len(df)} filas")
+    
     df.to_csv(filename, index=False)
     print(f"Se ha guardado la información en {filename}")
 
@@ -85,14 +87,6 @@ def download_station_data():
                 save_to_csv(data, os.path.join(data_dir, filename))
             else:
                 print(f"No se pudieron obtener los datos de {filename}")
-
-    # Log de cantidad de estaciones
-    if 'station_info.csv' in os.listdir(data_dir):
-        df_info = pd.read_csv(os.path.join(data_dir, 'station_info.csv'))
-        largo = len(df_info)
-        print(f'Descargada información de {largo} estaciones')
-    else:
-        print("No se encontró el archivo station_info.csv para contar las estaciones.")
 
 if __name__ == "__main__":
     download_station_data()

@@ -17,15 +17,15 @@ default_args = {
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
-    'start_date': datetime(2024, 10, 10),
-    'schedule_interval': '0 */1 * * *', 
+    'start_date': datetime(2024, 10, 8),
 }
 
 dag = DAG(
     dag_id='ecobici_dag',
     description='ETL para procesar datas de Ecobici Bs As',
     default_args=default_args,
-    catchup=True,
+    schedule_interval='@hourly',
+    catchup=False,
     max_active_tasks=32
 )
 
@@ -33,24 +33,28 @@ dag = DAG(
 task1 = PythonOperator(
     task_id='download_station_data',
     python_callable=download_station_data,
+    execution_timeout=timedelta(minutes=1),  # Timeout de 1 minutos
     dag=dag
 )
 
 task2 = PythonOperator(
     task_id='process_ecobici_data',
     python_callable=process_ecobici_data,
+    trigger_rule='all_success',  # Solo se ejecuta si la tarea anterior tuvo éxito
     dag=dag
 )
 
 task3 = PythonOperator(
     task_id='process_station_data',
     python_callable=process_station_data,
+    trigger_rule='all_success',
     dag=dag
 )
 
 task4 = PythonOperator(
     task_id='upload_files_to_redshift',
     python_callable=upload_files_to_redshift,
+    trigger_rule='all_success',
     dag=dag
 )
 
