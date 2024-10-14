@@ -42,6 +42,7 @@ Dentro de la carpeta `dags`, crea una subcarpeta llamada `env` y agrega los sigu
     ```env
     user = 'su_usuario'
     password = 'su_contraseña'
+    schema = 'su_schema'
     ```
 
 - El archivo `email_key.env` debe tener el siguiente contenido:

@@ -4,14 +4,12 @@ import redshift_connector
 from dotenv import dotenv_values
 import awswrangler as wr
 
-
-
 # Cargar las credenciales desde el archivo .env
 if 'AIRFLOW_HOME' in os.environ:
     path = os.environ['AIRFLOW_HOME']
 else:
     path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-    
+
 env_path = f'{path}/dags/env/redshift_key.env'
 credentials = dotenv_values(env_path)
 
@@ -46,7 +44,8 @@ def upload_to_redshift(file_name, table_name, mode, conn, schema):
 def upload_files_to_redshift():
     """Sube todos los archivos a las tablas correspondientes en Redshift."""
     conn = get_connection()
-    schema = f"{conn_params['user']}_schema"
+    schema = credentials['schema']
+    #schema = f"{conn_params['user']}_schema"
 
     files_to_tables = {
         'station_info_procesada.csv': 'stations_info',
