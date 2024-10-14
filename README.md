@@ -168,6 +168,8 @@ Esta tabla indica la cantidad de bicicletas libres en las estaciones.
 | 2024-09-26 01:17:44.994071 |          3 |         0.0 |
 | 2024-09-26 01:17:44.994071 |          4 |        0.05 |
 
+---
+
 ### Tablero de Control
 
 Con la información online se disponibiliza un tablero de control hecho en PowerBI, actualizado automáticamente 8 veces al día:
