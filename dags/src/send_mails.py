@@ -160,6 +160,5 @@ def ejecutar_tareas_mailing():
     texto_mail, asunto = procesar_estaciones(path, umbral)
     enviar_mail_diario(destinatarios, user, password, texto_mail, asunto)
 
-# Llamada a la función principal dentro de la tarea de Airflow
 if __name__ == "__main__":
     ejecutar_tareas_mailing()
