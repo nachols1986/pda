@@ -19,7 +19,7 @@ station_id,name,physical_configuration,lat,lon,altitude,address,post_code,capaci
 27,027 - Montevideo,SMARTLITMAPFRAME,-34.5991,-58.3901,0.0,Cordoba Av. & Montevideo,1111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,
 29,029 - Parque Centenario,SMARTLITMAPFRAME,-34.6079,-58.4336,0.0,Av. Patricias Argentinas & Estivao,11111,30,False,"['KEY', 'TRANSITCARD', 'PHONE']",['CABALLITO'],,,1000.0,True,
 32,032 - Catedral,SMARTLITMAPFRAME,-34.6067,-58.3737,0.0,Bartolomé Mitre & San Martín,11111,18,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,
-33,033 - Facultad de Medicina,SMARTLITMAPFRAME,-34.5971,-58.399,0.0,Pres. José Evaristo Uriburu 987,11111,19,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RECOLETA'],,,1000.0,True,"Uriburu Jose E., Pres. & Alvear, Marcelo T. De"
+33,033 - Facultad de Medicina,SMARTLITMAPFRAME,-34.5971,-58.399,0.0,Pres. José Evaristo Uriburu 987,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RECOLETA'],,,1000.0,True,"Uriburu Jose E., Pres. & Alvear, Marcelo T. De"
 35,035 - INGENIERO BUTTY,SMARTLITMAPFRAME,-34.5964,-58.3718,,Ing. E. Butty 291,11111,32,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RETIRO'],,,1000.0,True,Ing. E. Butty 291 &  Av Leandro N.  Alem
 36,036 - MAIPÚ,SMARTLITMAPFRAME,-34.6011,-58.3745,,Tucumán 536,C1049,12,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,Tucumán 536
 38,038 - Plaza Libertad,SMARTLITMAPFRAME,-34.597,-58.3828,0.0,Cerrito 990 y Av. Marcelo T. De Alvear,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RETIRO'],,,1609.34,True,
@@ -90,7 +90,7 @@ station_id,name,physical_configuration,lat,lon,altitude,address,post_code,capaci
 137,137 - AZOPARDO Y CHILE,SMARTLITMAPFRAME,-34.6156,-58.3675,,AZOPARDO 700,1111,24,False,"['KEY', 'TRANSITCARD', 'PHONE']",['MONSERRAT'],,,1609.34,True,AZOPARDO 700 & AV CHILE
 138,138 - Hospital Britanico,SMARTLITMAPFRAME,-34.6354,-58.3877,,153 Perdriel,1111,12,False,"['KEY', 'TRANSITCARD', 'PHONE']",['BARRACAS'],,,1000.0,True,
 144,144 - PUEYRREDÓN,SMARTLITMAPFRAME,-34.6019,-58.4061,,684 Boulogne Sur Mer & Tucuman,1111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['BALVANERA'],,,1000.0,True,684 Boulogne Sur Mer & Tucuman
-146,146 - Hospital Francés,SMARTLITMAPFRAME,-34.6221,-58.4078,,"3024 Calvo, Carlos",1111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN CRISTOBAL'],,,1000.0,True,"3024 Calvo, Carlos & La Rioja"
+146,146 - Hospital Francés,SMARTLITMAPFRAME,-34.6221,-58.4078,,"3024 Calvo, Carlos",1111,21,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN CRISTOBAL'],,,1000.0,True,"3024 Calvo, Carlos & La Rioja"
 148,323 - Parque Avellaneda II,SMARTLITMAPFRAME,-34.6452,-58.4846,,Av. Directorio 4295 ,1111,16,False,"['KEY', 'TRANSITCARD', 'PHONE']",['PARQUE AVELLANEDA'],,,1000.0,True,
 149,149 - LIMA,SMARTLITMAPFRAME,-34.6153,-58.3814,,México & Lima,11111,16,False,"['KEY', 'TRANSITCARD', 'PHONE']",['MONSERRAT'],,,1609.34,True,México & Lima
 150,150 - RODRIGO BUENO,SMARTLITMAPFRAME,-34.6188,-58.3555,,Av. España 2200,1111,36,False,"['KEY', 'TRANSITCARD', 'PHONE']",['PUERTO MADERO'],,,1609.34,True,Av. España y Rodrigo Bueno
@@ -119,7 +119,7 @@ station_id,name,physical_configuration,lat,lon,altitude,address,post_code,capaci
 182,182 - RAVIGNANI Y GUATEMALA,SMARTLITMAPFRAME,-34.578,-58.4352,,"2185 Ravignani, Emilio, Dr. & Guatemala",1111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['PALERMO'],,,1000.0,True,
 183,183 - VIRREY CEVALLOS,SMARTLITMAPFRAME,-34.6157,-58.39,,Mexico 1652,11111,28,False,"['KEY', 'TRANSITCARD', 'PHONE']",['MONSERRAT'],,,1609.34,True,Mexico 1652
 184,184 - Pedro Echague,SMARTLITMAPFRAME,-34.6306,-58.3913,0.0,Pedro Echague 1878 & Combate De Los Pozos,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['PARQUE PATRICIOS'],,,1000.0,True,
-186,186 - MANZANA 66,SMARTLITMAPFRAME,-34.6136,-58.4064,,2875 Moreno,11111,19,False,"['KEY', 'TRANSITCARD', 'PHONE']",['BALVANERA'],,,1000.0,True,2875 Moreno & Catamarca
+186,186 - MANZANA 66,SMARTLITMAPFRAME,-34.6136,-58.4064,,2875 Moreno,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['BALVANERA'],,,1000.0,True,2875 Moreno & Catamarca
 187,261 - QUINTEROS LIDORO,SMARTLITMAPFRAME,-34.5526,-58.4509,,"1483 Quinteros, Lidoro J. Av.",1111,16,False,"['KEY', 'TRANSITCARD', 'PHONE']",['BELGRANO'],,,1000.0,True,
 188,373 - Jorgelina De Simone,SMARTLITMAPFRAME,-34.6239,-58.3912,,Cochabamba 1799,1111,24,False,"['KEY', 'TRANSITCARD', 'PHONE']",['CONSTITUCION'],,,984916.08,True,
 189,189 - POSADAS,SMARTLITMAPFRAME,-34.5887,-58.3852,,1350 Posadas,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RETIRO'],,,1609.34,True,Posadas & Montevideo
@@ -264,14 +264,14 @@ station_id,name,physical_configuration,lat,lon,altitude,address,post_code,capaci
 428,225 - HOSPITAL TORNU,SMARTLITMAPFRAME,-34.5875,-58.474,,1052 Avalos,1111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['PARQUE CHAS'],,,1000.0,True,
 429,201 - PLAZA EJERCITO DE LOS ANDES,SMARTLITMAPFRAME,-34.639,-58.5101,,Av. Rivadavia y Albariño,1111,16,False,"['KEY', 'TRANSITCARD', 'PHONE']",['VILLA LURO'],,,1000.0,True,
 431,362 - PARQUE DE LA MEMORIA,SMARTLITMAPFRAME,-34.5426,-58.4369,,Av. Costanera Rafael Obligado 7200,1213,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['BELGRANO'],,,1000.0,True,
-432,187 - Jose Maria Moreno,SMARTLITMAPFRAME,-34.6199,-58.4358,,141 Jose Maria Moreno,1111,27,False,"['KEY', 'TRANSITCARD', 'PHONE']",['CABALLITO'],,,1000.0,True,
+432,187 - Jose Maria Moreno,SMARTLITMAPFRAME,-34.6199,-58.4358,,141 Jose Maria Moreno,1111,28,False,"['KEY', 'TRANSITCARD', 'PHONE']",['CABALLITO'],,,1000.0,True,
 433,273 - Plazoleta Colombia,SMARTLITMAPFRAME,-34.6377,-58.3737,,1619 Brandsen,1111,24,False,"['KEY', 'TRANSITCARD', 'PHONE']",['BARRACAS'],,,1000.0,True,
 434,247 - PLAZA LUCIO DEMARE,SMARTLITMAPFRAME,-34.5457,-58.4651,,O`Higgins 3750,11111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['Nuñez'],,,1000.0,True,
 435,227 -Club Ciudad de Buenos Aires,SMARTLITMAPFRAME,-34.5445,-58.4595,,Miguel Sanchez y Av Libertadores,1111,24,False,"['KEY', 'TRANSITCARD', 'PHONE']",['Nuñez'],,,1000.0,True,
 436,253 - Plaza Colegiales,SMARTLITMAPFRAME,-34.5765,-58.4435,1.0,Tte. Benjamin Matienzo 2886,C1426,16,False,"['KEY', 'TRANSITCARD', 'PHONE']",['PALERMO'],,,1000.0,True,
 440,142 - ARMENIA,SMARTLITMAPFRAME,-34.5906,-58.4289,0.0,ARMENIA 1525 y GORRITI,C1414,16,False,"['KEY', 'TRANSITCARD', 'PHONE']",['PALERMO'],.,.,1000.0,True,
 441,016 - Legislatura,SMARTLITMAPFRAME,-34.6098,-58.3748,,"169 Peru & Roca, Julio A., Presidente Diagonal Sur Av.",1111,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['MONSERRAT'],,,1609.34,True,
-444,061 - Ministerio de Economia,SMARTLITMAPFRAME,-34.6089,-58.3707,,"Balcarce e Yrigoyen, Hipolito Av.",1111,23,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,
+444,061 - Ministerio de Economia,SMARTLITMAPFRAME,-34.6089,-58.3707,,"Balcarce e Yrigoyen, Hipolito Av.",1111,24,False,"['KEY', 'TRANSITCARD', 'PHONE']",['SAN NICOLAS'],,,1000.0,True,
 448,393 - Barrio 31,SMARTLITMAPFRAME,-34.5821,-58.3788,,Islas Galápagos 2800,1111,32,False,"['KEY', 'TRANSITCARD', 'PHONE']",['RETIRO'],,,1000.0,True,
 449,352 - San Jose de Flores,SMARTLITMAPFRAME,-34.6288,-58.4633,,Av. Rivadavia 6955,1111,24,False,"['KEY', 'TRANSITCARD', 'PHONE']",['FLORES'],,,1000.0,True,
 453,028 - Plaza de la Bandera,SMARTLITMAPFRAME,-34.6295,-58.4945,0.0,Av. Gaona 5181,C1407,20,False,"['KEY', 'TRANSITCARD', 'PHONE']",['VELEZ SARFIELD'],,,1000.0,True,
