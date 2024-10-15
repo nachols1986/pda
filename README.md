@@ -6,7 +6,7 @@ El proceso comienza con la descarga de datos desde la API, la cual proporciona i
 
 Una vez obtenidos, los datos pasan por un proceso de transformación, donde se aplican diferentes operaciones para limpiar, estructurar y enriquecer la información. Esto incluye la generación de métricas agregadas relevantes, como la disponibilidad de bicicletas en cada estación y la cantidad de estaciones fuera de servicio en un determinado período de tiempo.
 
-Finalmente, los datos transformados se cargan en una base de datos en Amazon Redshift.
+Finalmente, los datos transformados se cargan en una base de datos en Amazon Redshift. En paralelo, se envía por mail a una lista de distribución a determinar, el estado del sistema y una altera si la cantidad de estaciones fuera de servicio (%) supera cierto umbral definido por el usuario.
 
 Todo el proceso está orquestado mediante Airflow.
 
@@ -29,7 +29,7 @@ En resumen, este proyecto ofrece una solución completa para la extracción, tra
 
 #### Paso 3: Configuración de archivos de entorno
 
-Dentro de la carpeta `dags`, crea una subcarpeta llamada `env` y agrega los siguientes archivos: `gcba_api_key.env` y `redshift_key.env`.
+Dentro de la carpeta `dags`, crea una subcarpeta llamada `env` y agrega los siguientes archivos: `gcba_api_key.env`, `redshift_key.env` y `email_key.env`.
 
 - El archivo `gcba_api_key.env` debe tener el siguiente contenido:
     ```env
@@ -42,7 +42,30 @@ Dentro de la carpeta `dags`, crea una subcarpeta llamada `env` y agrega los sigu
     ```env
     user = 'su_usuario'
     password = 'su_contraseña'
+    schema = 'su_schema'
     ```
+
+- El archivo `email_key.env` debe tener el siguiente contenido:
+    ```env
+    user = 'su_usuario'
+    password = 'su_contraseña'
+    ```
+    Estas credenciales se pueden obtener con una cuenta vinculada a la [API de Gmail de Google] (https://developers.google.com/gmail/api/guides?hl=es-419)
+
+Dentro de la carpeta `dags`, crea una subcarpeta llamada `params` y agrega los siguientes archivos: `destinatarios.txt` y `umbral.env`.
+
+- El archivo `destinatarios.txt` debe las direcciones de email a las cuales se quiere enviar el informe. Las mismas se deben declarar una abajo de  la otra, sin ningún tipo de separador:
+    ```env
+    mail_ejemplo_1@email.com
+    mail_ejemplo_2@email.com
+    ...
+    ```
+
+- El archivo `umbral.env` debe tener el siguiente contenido:
+    ```env
+    umbral = [valor entero entre 0 y 100]
+    ```
+    El valor de umbral que se define (será un porcentaje entre 0 y 100) será el valor para el cual, de superarse el % de estaciones OOS, se informará vía email (por default, el valor será 20).
 
 La estructura que debería quedar es la siguiente:
 
@@ -53,10 +76,15 @@ La estructura que debería quedar es la siguiente:
 │   │   ├── conexion_api.py
 │   │   ├── process_ecobici_data.py
 │   │   ├── create_aggregated_tables.py
+│   │   ├── send_mails.py
 │   │   └── upload_to_redshift.py
 │   ├── env
 │   │   ├── gcba_api_key.env
-│   │   └── redshift_key.env
+│   │   ├── redshift_key.env
+│   │   └── email_key.env
+│   ├── params
+│   │   ├── destinatarios.txt
+│   │   └── umbral.env
 │   ├── data
 │   │   ├── raw
 │   │   └── clean
@@ -139,3 +167,9 @@ Esta tabla indica la cantidad de bicicletas libres en las estaciones.
 | 2024-09-26 01:17:44.994071 |          2 |         0.4 |
 | 2024-09-26 01:17:44.994071 |          3 |         0.0 |
 | 2024-09-26 01:17:44.994071 |          4 |        0.05 |
+
+### Tablero de Control
+
+Con la información online se disponibiliza un tablero de control hecho en PowerBI, actualizado automáticamente 8 veces al día:
+
+[Dashboard Ecobici](https://nachols1986.github.io/infovis/dashboard_ecobici.html)
