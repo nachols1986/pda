@@ -99,6 +99,5 @@ def process_ecobici_data():
     print("\n-------------------------STATION STATUS--------------------------------")
     print(df_st.head(3))
 
-# Invocar la función si se ejecuta como un script
 if __name__ == '__main__':
     process_ecobici_data()
